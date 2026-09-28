@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f3ee;
+    color: #151515;
+}
+
+.caja {
+    height: 80px;
+    padding: 0 7%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #111;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.boton {
+    padding: 13px 20px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.carrito {
+    padding: 11px 15px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #111;
+    text-decoration: none;
+}
+
+.carrito span {
+    padding: 3px 7px;
+    background: #111;
+    color: white;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.portada {
+    min-height: 690px;
+    padding: 70px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background:
+        linear-gradient(90deg, #000d, #0003),
+        url("../imagenes/fondo.jfif") center/cover;
+    color: white;
+}
+
+.contenido {
+    max-width: 650px;
+}
+
+.contenido span,
+.titulo span {
+    letter-spacing: 5px;
+    font-size: 13px;
+}
+
+.contenido h1 {
+    margin: 25px 0;
+    font-size: 75px;
+    line-height: .95;
+}
+
+.contenido h1 i {
+    display: block;
+    font-weight: normal;
+}
+
+.contenido p {
+    max-width: 520px;
+    margin-bottom: 35px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #eee;
+}
+
+.grande {
+    display: inline-block;
+    background: white;
+    color: #111;
+}
+
+.chichi {
+    width: 370px;
+    padding: 20px;
+    background: #fffe;
+    border: 3px solid white;
+}
+
+.chichi img {
+    width: 100%;
+    display: block;
+}
+
+.populares {
+    padding: 100px 7%;
+    text-align: center;
+}
+
+.titulo h2 {
+    margin: 18px 0 10px;
+    font-size: 50px;
+}
+
+.titulo p {
+    color: #777;
+}
+
+.ropa {
+    margin: 45px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.prenda {
+    background: white;
+    text-align: left;
+}
+
+.prenda img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info span {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.info h3 {
+    margin: 10px 0;
+    font-size: 21px;
+}
+
+.info strong {
+    font-size: 18px;
+}
+
+.oscuro {
+    display: inline-block;
+}
+
+.frase {
+    padding: 110px 20px;
+    text-align: center;
+    color: white;
+    background: #151515;
+}
+
+.frase h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.frase p {
+    color: #aaa;
+}
+
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    background: white;
+}
+
+footer h2 {
+    margin-bottom: 25px;
+    letter-spacing: 5px;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+footer a {
+    color: #222;
+    text-decoration: none;
+}
+
+footer small {
+    color: #999;
+}
+
+@media (max-width: 950px) {
+
+    .caja {
+        height: auto;
+        min-height: 80px;
+        padding: 16px 6%;
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+
+    nav {
+        order: 3;
+        flex: 0 0 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+    }
+
+    .ropa {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chichi {
+        width: 280px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .caja {
+        padding: 14px 5%;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 21px;
+        letter-spacing: 3px;
+    }
+
+    .acciones {
+        gap: 6px;
+    }
+
+    .boton {
+        padding: 11px 12px;
+        font-size: 11px;
+    }
+
+    .carrito {
+        padding: 9px 11px;
+    }
+
+    nav {
+        gap: 10px 18px;
+        font-size: 14px;
+    }
+
+    .portada {
+        min-height: auto;
+        padding: 60px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .contenido h1 {
+        font-size: 42px;
+    }
+
+    .contenido p {
+        font-size: 16px;
+    }
+
+    .chichi {
+        width: min(100%, 280px);
+        align-self: center;
+    }
+
+    .populares {
+        padding: 70px 5%;
+    }
+
+    .titulo h2 {
+        font-size: 36px;
+    }
+
+    .ropa {
+        grid-template-columns: 1fr;
+    }
+
+    .prenda img {
+        height: 360px;
+    }
+
+    .frase h2 {
+        font-size: 35px;
+    }
+
+    footer div {
+        flex-wrap: wrap;
+        gap: 14px 22px;
+    }
+
+}
+
+@media (max-width: 260px) {
+
+    .caja {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 6px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .portada {
+        min-height: auto;
+        padding: 36px 5%;
+    }
+
+    .contenido span,
+    .titulo span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .contenido h1 {
+        font-size: 30px;
+        overflow-wrap: anywhere;
+    }
+
+    .contenido p {
+        font-size: 15px;
+    }
+
+    .titulo h2,
+    .frase h2 {
+        font-size: 29px;
+    }
+
+    .populares {
+        padding: 54px 5%;
+    }
+
+    .info {
+        padding: 16px;
+    }
+
+    .prenda img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    footer h2 {
+        letter-spacing: 3px;
+    }
+
+}

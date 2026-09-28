@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f6f2;
+    color: #252620;
+}
+
+.caja {
+    height: 76px;
+    padding: 0 7%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8e7e1;
+}
+
+.logo {
+    color: #111;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 26px;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color .2s ease;
+}
+
+nav a:hover {
+    color: #7b806e;
+}
+
+.boton {
+    padding: 12px 16px;
+    background: #292b25;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    transition: background-color .2s ease;
+}
+
+.boton:hover {
+    background: #626853;
+}
+
+.presentacion {
+    padding: 86px 7%;
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: 64px;
+    align-items: center;
+    background: white;
+}
+
+.texto > span,
+.historia span,
+.valores span {
+    color: #777d67;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.texto h1 {
+    width: fit-content;
+    max-width: min(560px, 100%);
+    margin: 22px 0;
+    padding: 14px 18px;
+    background: #f1f0ea;
+    color: #111;
+    border-radius:30px;
+    border: 1px solid #a3a3a3;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 62px;
+    font-weight: 400;
+    line-height: 1.04;
+}
+
+.texto h1 i {
+    color: #111;
+    font-weight: 400;
+}
+
+.texto p {
+    max-width: 600px;
+    margin-bottom: 16px;
+    color: #66675f;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.foto {
+    padding: 12px;
+    background: #f1f0ea;
+}
+
+.foto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.historia {
+    padding: 82px 7%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 64px;
+    align-items: center;
+    background: #f5f4ef;
+    border-top: 1px solid #e5e3dc;
+    border-bottom: 1px solid #e5e3dc;
+}
+
+.historia h2 {
+    margin-top: 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.historia h2 i {
+    color: #777d67;
+    font-weight: 400;
+}
+
+.historia p {
+    max-width: 560px;
+    color: #66675f;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.valores {
+    padding: 68px 7%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    background: #292b25;
+    color: white;
+}
+
+.valores article {
+    padding: 18px 4px 0;
+    border-top: 1px solid #62645c;
+}
+
+.valores span {
+    color: #c1c5b2;
+}
+
+.valores h2 {
+    margin: 18px 0 10px;
+    font-size: 15px;
+}
+
+.valores p {
+    max-width: 340px;
+    color: #d0d0c9;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+footer {
+    min-height: 92px;
+    padding: 24px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: white;
+    border-top: 1px solid #e8e7e1;
+}
+
+footer h2 {
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+footer a {
+    color: #55564f;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+footer small {
+    color: #999;
+    font-size: 11px;
+}
+
+@media (max-width: 800px) {
+
+    .caja {
+        height: auto;
+        min-height: 80px;
+        padding: 16px 6%;
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+
+    nav {
+        order: 3;
+        flex: 0 0 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+    }
+
+    .presentacion,
+    .historia,
+    .valores {
+        grid-template-columns: 1fr;
+    }
+
+    .texto h1,
+    .historia h2 {
+        font-size: 44px;
+    }
+
+    .presentacion,
+    .historia {
+        padding: 64px 6%;
+        gap: 32px;
+    }
+
+    .valores {
+        padding: 52px 6%;
+        gap: 24px;
+    }
+
+    .texto p,
+    .historia p {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .caja {
+        padding: 14px 5%;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .boton {
+        padding: 11px 12px;
+        font-size: 11px;
+    }
+
+    nav {
+        gap: 10px 18px;
+        font-size: 14px;
+    }
+
+    .presentacion,
+    .historia,
+    .valores {
+        padding: 56px 5%;
+    }
+
+    footer {
+        padding: 28px 5%;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .texto h1,
+    .historia h2 {
+        font-size: 36px;
+    }
+
+    .valores article {
+        padding: 24px;
+    }
+
+}
+
+@media (max-width: 260px) {
+
+    .caja {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 6px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .presentacion,
+    .historia,
+    .valores {
+        padding: 46px 5%;
+    }
+
+    .texto > span,
+    .historia span,
+    .valores span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .texto h1,
+    .historia h2 {
+        font-size: 30px;
+        overflow-wrap: anywhere;
+    }
+
+    .texto p,
+    .historia p {
+        font-size: 14px;
+    }
+
+    .valores article {
+        padding: 18px;
+    }
+
+    footer h2 {
+        letter-spacing: 3px;
+    }
+
+}
